@@ -46,7 +46,7 @@ export default function Portfolio() {
               <h1 className="title">Muhammad Ahmad</h1>
               <TypeAnimation sequence={["Full-Stack Developer", 1000, "React & Node.js Expert", 1000,"C# Desktop Application Developer", 1000]} speed={50} className="subtitle" repeat={Infinity} />
             </div>
-            <img src="./images/me4.jpg" alt="Muhammad Ahmad" className="profile-img" />
+            <img src="./public/images/me4.jpg" alt="Muhammad Ahmad" className="profile-img" />
           </div>
         </motion.div>
 
