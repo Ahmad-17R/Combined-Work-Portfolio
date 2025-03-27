@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+#education {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: white;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.education-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    text-align: center; /* Center the title on mobile */
+}
+
+/* Arrange containers side by side */
+.education-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Centers them horizontally */
+    align-items: stretch; /* Makes sure both cards have equal height */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.education-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
+    text-align: left;
+    transition: 0.3s;
+    flex: 1; /* Each card takes equal space */
+    min-width: 300px; /* Prevents them from getting too small */
+    max-width: 400px; /* Adjust width as needed */
+}
+
+.education-card:hover {
+    background: #00ff00;
+    color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 255, 0, 0.4);
+}
+
+.edu-icon {
+    font-size: 3rem;
+    color: #00ff00;
+    margin-bottom: 15px;
+}
+
+.icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+    color: #00ff00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #education {
+        padding: 30px 5%; /* Adjust padding for smaller screens */
+        text-align: left; /* Align content to the left on mobile */
+    }
+
+    .section-title {
+        font-size: 1.8rem; /* Reduce font size for mobile */
+        margin-bottom: 20px; /* Reduce margin for mobile */
+        text-align: left; /* Ensure title is left-aligned */
+    }
+
+    .education-list {
+        flex-direction: column; /* Stacks them on smaller screens */
+        gap: 15px;
+    }
+
+    .education-card {
+        min-width: auto; /* Allow cards to take full width on mobile */
+        max-width: 100%; /* Ensure cards don't exceed screen width */
+        padding: 15px; /* Reduce padding for mobile */
+    }
+
+    .edu-icon {
+        font-size: 2.5rem; /* Reduce icon size for mobile */
+        margin-bottom: 10px; /* Reduce margin for mobile */
+    }
+
+    .icon {
+        font-size: 1rem; /* Reduce icon size for mobile */
+        margin-right: 5px;
+    }
+}

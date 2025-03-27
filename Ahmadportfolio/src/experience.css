@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+#experience {
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: white;
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.experience-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #00ff00;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Experience Card */
+.experience-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
+  transition: 0.3s;
+}
+
+.experience-card:hover {
+  background: #00ff00;
+  color: black;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 255, 0, 0.4);
+}
+
+/* Ensure text inside the card also turns black on hover */
+.experience-card:hover .job-title,
+.experience-card:hover .company,
+.experience-card:hover .duration,
+.experience-card:hover .description {
+  color: black !important;
+}
+
+/* Left Side - Text Content */
+.experience-content {
+  flex: 1;
+  text-align: left;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.company,
+.duration {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Right Side - Image */
+.experience-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exp-img {
+  width: 80%;
+  max-width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .experience-content {
+    text-align: center;
+  }
+
+  .exp-img {
+    width: 100%;
+    height: 220px;
+  }
+}
