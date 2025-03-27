@@ -9,7 +9,7 @@ const Experience = () => {
     duration: "Sept 2024 - Present",
     description:
       "Working as Teaching Assistant in the course of programming fundamentals and Object oriented programming",
-    imageUrl: "/images/exp1.jpg", // Replace with actual image path
+    imageUrl: "./Images/exp1.jpg", // Replace with actual image path
   };
 
   return (

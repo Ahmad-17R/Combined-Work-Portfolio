@@ -46,7 +46,7 @@ export default function Portfolio() {
               <h1 className="title">Muhammad Ahmad</h1>
               <TypeAnimation sequence={["Full-Stack Developer", 1000, "React & Node.js Expert", 1000,"C# Desktop Application Developer", 1000]} speed={50} className="subtitle" repeat={Infinity} />
             </div>
-            <img src="./public/images/me4.jpg" alt="Muhammad Ahmad" className="profile-img" />
+            <img src="./Images/me4.jpg" alt="Muhammad Ahmad" className="profile-img" />
           </div>
         </motion.div>
 
@@ -127,15 +127,15 @@ export default function Portfolio() {
   <h2 className="section-title">Projects</h2>
   <div className="projects-grid">
     {[
-      { name: "User Authentication System", link: "https://user-authentication-system-lyart.vercel.app/", img: "./public/images/User.png" },
-      { name: "University Map application", link: "https://hannanm10.github.io/UET-Navigation-System/", img: "/public/images/Map.jpg" },
-      { name: "Data Visualization Dashboard", link: "https://stocks-and-crypto-visualization-dashboard-uo2t.vercel.app/", img: "/public/images/stock.png" },
-      { name: "Sorting Visualizer", link: "https://data-sorting-visualizer.vercel.app/", img: "/public/images/Sorting.png" },
-      { name: "Solitaire Game", link: "https://solitaire-game-phi.vercel.app/", img: "/public/images/soliatire.png" },
-      { name: "Student Management System", link: "https://student-managment-system-mauve.vercel.app/", img: "/public/images/Student.png" },
+      { name: "User Authentication System", link: "https://user-authentication-system-lyart.vercel.app/", img: "./Images/User.png" },
+      { name: "University Map application", link: "https://hannanm10.github.io/UET-Navigation-System/", img: "./Images/Map.jpg" },
+      { name: "Data Visualization Dashboard", link: "https://stocks-and-crypto-visualization-dashboard-uo2t.vercel.app/", img: "./Images/stock.png" },
+      { name: "Sorting Visualizer", link: "https://data-sorting-visualizer.vercel.app/", img: "./Images/Sorting.png" },
+      { name: "Solitaire Game", link: "https://solitaire-game-phi.vercel.app/", img: "./Images/soliatire.png" },
+      { name: "Student Management System", link: "https://student-managment-system-mauve.vercel.app/", img: "./Images/Student.png" },
       { name: "Scrap Xpert", link: "https://scrap-xpert.vercel.app/", img: "/public/images/scrap.png" },
-      { name: "Foodpanda Desktop Application", link: "https://food-panda-clone-sage.vercel.app/", img: "/public/images/foodpanda.png" },
-      { name: "TankWars Desktop Game", link: "https://tank-wars-blond.vercel.app/", img: "/public/images/game.png" }
+      { name: "Foodpanda Desktop Application", link: "https://food-panda-clone-sage.vercel.app/", img: "./Images/foodpanda.png" },
+      { name: "TankWars Desktop Game", link: "https://tank-wars-blond.vercel.app/", img: "./Images/game.png" }
     ].map(({ name, link, img }, index) => (
       <motion.div key={index} className="project-card">
         <img src={img} alt={name} className="project-img" />

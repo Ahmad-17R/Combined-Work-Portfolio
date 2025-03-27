@@ -7,7 +7,7 @@ const Achievements = () => {
     {
       title: "Coding Competition",
       description: "Participated in coding competition in the module of problem solving, finished in top 10",
-      image: "./public/Images/cert2.jpg", // Change to actual certificate image path
+      image: "./Images/cert2.jpg", // Change to actual certificate image path
     },
     {
       title: "Introduction to Database and  SQL",
