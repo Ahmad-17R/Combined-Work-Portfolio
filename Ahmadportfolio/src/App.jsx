@@ -133,7 +133,7 @@ export default function Portfolio() {
       { name: "Sorting Visualizer", link: "https://data-sorting-visualizer.vercel.app/", img: "./Images/Sorting.png" },
       { name: "Solitaire Game", link: "https://solitaire-game-phi.vercel.app/", img: "./Images/Soliatire.png" },
       { name: "Student Management System", link: "https://student-managment-system-mauve.vercel.app/", img: "./Images/Student.png" },
-      { name: "Scrap Xpert", link: "https://scrap-xpert.vercel.app/", img: "./Images/scrap.png" },
+      { name: "Scrap Xpert", link: "https://scrap-xpert.vercel.app/", img: "./Images/Scrap.png" },
       { name: "Foodpanda Desktop Application", link: "https://food-panda-clone-sage.vercel.app/", img: "./Images/foodpanda.png" },
       { name: "TankWars Desktop Game", link: "https://tank-wars-blond.vercel.app/", img: "./Images/game.png" }
     ].map(({ name, link, img }, index) => (
