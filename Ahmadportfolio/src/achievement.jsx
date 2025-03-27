@@ -7,12 +7,12 @@ const Achievements = () => {
     {
       title: "Coding Competition",
       description: "Participated in coding competition in the module of problem solving, finished in top 10",
-      image: "/images/cert2.jpg", // Change to actual certificate image path
+      image: "./images/cert2.jpg", // Change to actual certificate image path
     },
     {
       title: "Introduction to Database and  SQL",
       description: "Successfully completed the course of intro to database and SQL at mygreatlearning platform",
-      image: "/images/cert1.jpg", // Change to actual certificate image path
+      image: "./images/cert1.jpg", // Change to actual certificate image path
     },
   ];
 
