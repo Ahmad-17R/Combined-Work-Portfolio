@@ -51,9 +51,18 @@ export default function Portfolio() {
         </motion.div>
 
       {  /* About Me Section */}
-       <motion.div id="about" className="about-section" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
+       <motion.div
+          id="about"
+          className="about-section"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="section-title">About Me</h2>
-          <p>Passionate Computer Scientist from UET Lahore specializing in Full Stack Development. Committed to pushing boundaries and innovating in technology.</p>
+          <p style={{ fontSize: '1.15rem', fontWeight: '500', lineHeight: '1.8', marginBottom: '25px' }}>
+            Passionate Computer Scientist from UET Lahore specializing in Full Stack Development. Committed to pushing boundaries and innovating in technology.
+          </p>
           <ul className="about-list">
          
           
@@ -74,25 +83,40 @@ export default function Portfolio() {
         <Achievements/>
         <Experience/>
         {/* Services Section */}
-        <motion.div id="services" className="services-section" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
+        <motion.div
+          id="services"
+          className="services-section"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="section-title">Services</h2>
           <div className="services-grid">
             {[{ service: "Full stack Web Application Development", icon: FaCode }, { service: "Desktop Application Development", icon: FaCogs }, { service: "Debugging & Optimization", icon: FaBug }].map(({ service, icon: Icon }, index) => (
-              <div key={index} className="service-card">
+              <motion.div
+                key={index}
+                className="service-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+              >
                 <Icon className="service-icon" />
                 <h3 className="service-title">{service}</h3>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
 
-       {/* Skills Section */}
-<motion.div 
-  id="skills" 
-  className="skills-section" 
-  initial={{ opacity: 0 }} 
-  whileInView={{ opacity: 1 }} 
-  transition={{ duration: 1 }}
+<motion.div
+  id="skills"
+  className="skills-section"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
 >
   <h2 className="section-title">Skills</h2>
   <div className="skills-grid">
@@ -105,24 +129,32 @@ export default function Portfolio() {
       { skill: "Leadership & Decision Making", icon: FaUsers },
       { skill: "UI/UX Design (Figma)", icon: FaPalette } // New Skill Added
     ].map(({ skill, icon: Icon }, index) => (
-      <div key={index} className="skill-card">
+      <motion.div
+        key={index}
+        className="skill-card"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        whileHover={{ y: -10, scale: 1.02 }}
+      >
         <Icon className="skill-icon" />
         <div>
           <h3 className="skill-title">{skill}</h3>
         </div>
-      </div>
+      </motion.div>
     ))}
   </div>
 </motion.div>
 
 
-        {/* Projects Section */}
-        <motion.div 
-  id="projects" 
-  className="projects-section" 
-  initial={{ opacity: 0 }} 
-  whileInView={{ opacity: 1 }} 
-  transition={{ duration: 1 }}
+<motion.div
+  id="projects"
+  className="projects-section"
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
 >
   <h2 className="section-title">Projects</h2>
   <div className="projects-grid">
@@ -137,7 +169,15 @@ export default function Portfolio() {
       { name: "Foodpanda Desktop Application", link: "https://food-panda-clone-sage.vercel.app/", img: "./Images/foodpanda.png" },
       { name: "TankWars Desktop Game", link: "https://tank-wars-blond.vercel.app/", img: "./Images/game.png" }
     ].map(({ name, link, img }, index) => (
-      <motion.div key={index} className="project-card">
+      <motion.div
+        key={index}
+        className="project-card"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.08 }}
+        whileHover={{ y: -10, scale: 1.02 }}
+      >
         <img src={img} alt={name} className="project-img" />
         <h3 className="project-title">{name}</h3>
         <a 
@@ -154,9 +194,16 @@ export default function Portfolio() {
 </motion.div>
 
         {/* Contact Me Section */}
-        <motion.div id="contact" className="contact-section" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
+        <motion.div
+          id="contact"
+          className="contact-section"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h2 className="section-title">Contact Me</h2>
-          <p className="text">Let's build something amazing together! Feel free to reach out for collaborations, projects, or just a chat.</p>
+          <p className="text" style={{ fontSize: '1.15rem', fontWeight: '500', lineHeight: '1.8' }}>Let's build something amazing together! Feel free to reach out for collaborations, projects, or just a chat.</p>
           <div className="contact-icons">
             <a href="https://github.com/Ahmad-17R" className="contact-icon"  target="_blank" rel="noopener noreferrer"><FaGithub /></a>
             <a href="https://www.linkedin.com/in/muhammad-ahmad-5217702a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="contact-icon"  target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
