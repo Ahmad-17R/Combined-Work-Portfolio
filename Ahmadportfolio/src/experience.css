@@ -1,19 +1,21 @@
 #experience {
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #1e1e1e, #0f0f0f);
-  color: white;
-  padding: 60px 8%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(20px);
+  color: var(--text-primary);
+  padding: 4rem 8%;
   text-align: center;
-  margin: 80px 5%;
-  border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 255, 0, 0.2);
-  border: 1px solid rgba(0, 255, 0, 0.1);
-  transition: all 0.4s ease;
+  margin: 5rem 5%;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-xl);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #experience:hover {
-  box-shadow: 0 12px 40px rgba(0, 255, 0, 0.3);
-  transform: translateY(-5px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  transform: translateY(-2px);
 }
 
 .experience-container {
@@ -22,45 +24,50 @@
 }
 
 #experience .section-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  margin-bottom: 40px;
-  color: #00ff00;
-  text-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
-  letter-spacing: 1.5px;
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 15px;
+  gap: 1rem;
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 #experience .section-title::after {
   content: '';
   position: absolute;
-  width: 60%;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #00ff00, transparent);
-  bottom: -10px;
-  left: 20%;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  width: 4rem;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .experience-icon {
-  font-size: 2.5rem;
-  color: #00ff00;
-  filter: drop-shadow(0 0 10px rgba(0, 255, 0, 0.5));
+  font-size: 2.25rem;
+  color: var(--primary-color);
+  filter: drop-shadow(0 4px 8px rgba(99, 102, 241, 0.3));
 }
 
 .experience-card {
   display: flex;
   align-items: center;
-  gap: 40px;
-  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 255, 0, 0.15);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 1px solid rgba(0, 255, 0, 0.1);
+  gap: 3rem;
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(20px);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border-color);
   position: relative;
   overflow: hidden;
 }
@@ -72,7 +79,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
   transition: left 0.5s ease;
 }
 
@@ -81,18 +88,17 @@
 }
 
 .experience-card:hover {
-  background: linear-gradient(145deg, #00ff00, #00cc00);
-  color: black;
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(0, 255, 0, 0.4);
-  border: 1px solid rgba(0, 255, 0, 0.5);
+  background: rgba(99, 102, 241, 0.1);
+  border-color: var(--primary-color);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
 }
 
 .experience-card:hover .job-title,
 .experience-card:hover .company,
 .experience-card:hover .duration,
 .experience-card:hover .description {
-  color: black !important;
+  color: var(--text-primary) !important;
 }
 
 .experience-content {
@@ -103,27 +109,28 @@
 }
 
 .job-title {
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin-bottom: 10px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
   line-height: 1.3;
+  color: var(--text-primary);
 }
 
 .company,
 .duration {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #bbb;
-  margin: 8px 0;
+  color: var(--text-secondary);
+  margin: 0.5rem 0;
   line-height: 1.6;
 }
 
 .description {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #ccc;
-  margin-top: 15px;
-  line-height: 1.8;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  line-height: 1.7;
 }
 
 .experience-image {
@@ -138,18 +145,18 @@
 .exp-img {
   width: 100%;
   max-width: 400px;
-  height: 280px;
+  height: 260px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
-  border: 2px solid #00ff00;
-  transition: all 0.4s ease;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .experience-card:hover .exp-img {
-  transform: scale(1.05);
-  border-color: black;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transform: scale(1.03);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {

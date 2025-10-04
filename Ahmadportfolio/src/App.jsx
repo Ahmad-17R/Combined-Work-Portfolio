@@ -46,7 +46,7 @@ export default function Portfolio() {
               <h1 className="title">Muhammad Ahmad</h1>
               <TypeAnimation sequence={["Full-Stack Developer", 1000, "React & Node.js Expert", 1000,"C# Desktop Application Developer", 1000]} speed={50} className="subtitle" repeat={Infinity} />
             </div>
-            <img src="./Images/me4.jpg" alt="Muhammad Ahmad" className="profile-img" />
+            <img src="./Images/dp4.png" alt="Muhammad Ahmad" className="profile-img" />
           </div>
         </motion.div>
 
@@ -69,7 +69,7 @@ export default function Portfolio() {
 
             <li><strong style={{ color: "royalblue" }}>Name:</strong>&nbsp;&nbsp;&nbsp;&nbsp; Muhammad Ahmad</li>
             <li><strong style={{ color: "royalblue" }}>Email:</strong>&nbsp;&nbsp;&nbsp;&nbsp; ahmadhoney7850@gmail.com</li>
-            <li><strong style={{ color: "royalblue" }}>Phone:</strong>&nbsp;&nbsp;&nbsp;&nbsp; +92 30433350835</li>
+            <li><strong style={{ color: "royalblue" }}>Phone:</strong>&nbsp;&nbsp;&nbsp;&nbsp; +92 3043330835</li>
             <li><strong style={{ color: "royalblue" }}>Country:</strong>&nbsp;&nbsp;&nbsp;&nbsp; Pakistan</li>
             <li><strong style={{ color: "royalblue" }}>City:</strong>&nbsp;&nbsp;&nbsp;&nbsp; Lahore</li>
           </ul>
