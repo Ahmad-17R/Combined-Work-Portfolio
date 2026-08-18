@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 // import { useState } from "react";
 import { SiFiverr, SiUpwork } from "react-icons/si";
 import { FaGithub, FaLinkedin, FaDownload, FaJs, FaReact, FaDatabase, FaCogs, FaLightbulb, FaUsers, FaExternalLinkAlt, FaCode, FaBug,FaPalette } from "react-icons/fa";
-import { TypeAnimation } from "react-type-animation";
 import "./App.css"; // Importing CSS file
 import Education from "./AboutSection";
 import Achievements from "./achievement";
 import Experience from "./experience";
+import Testimonial from "./testimonial";
 
 export default function Portfolio() {
   // const [hover, setHover] = useState(false);
@@ -35,6 +35,7 @@ export default function Portfolio() {
           <li><a href="#education">Education</a></li>
           <li><a href="#achievements">Achievements</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#testimonial">Testimonial</a></li>
         </ul>
       </nav>
 
@@ -44,7 +45,7 @@ export default function Portfolio() {
           <div className="profile-container">
             <div>
               <h1 className="title">Muhammad Ahmad</h1>
-              <TypeAnimation sequence={["Full-Stack Developer", 1000, "React & Node.js Expert", 1000,"C# Desktop Application Developer", 1000]} speed={50} className="subtitle" repeat={Infinity} />
+              <p className="subtitle">Founder @ Godiddly — Full-Stack AI Engineer & Automation Expert</p>
             </div>
             <img src="./Images/dp4.png" alt="Muhammad Ahmad" className="profile-img" />
           </div>
@@ -61,17 +62,18 @@ export default function Portfolio() {
         >
           <h2 className="section-title">About Me</h2>
           <p style={{ fontSize: '1.15rem', fontWeight: '500', lineHeight: '1.8', marginBottom: '25px' }}>
-            Passionate Computer Scientist from UET Lahore specializing in Full Stack Development. Committed to pushing boundaries and innovating in technology.
+            Full-stack software engineer and founder of <strong>Godiddly</strong>, an IT services company delivering web, desktop, and automation solutions for businesses worldwide. Computer Science undergraduate at UET Lahore with a track record of shipping production-grade applications for international clients.
           </p>
           <ul className="about-list">
-         
-          
 
-            <li><strong style={{ color: "royalblue" }}>Name:</strong>&nbsp;&nbsp;&nbsp;&nbsp; Muhammad Ahmad</li>
-            <li><strong style={{ color: "royalblue" }}>Email:</strong>&nbsp;&nbsp;&nbsp;&nbsp; ahmadhoney7850@gmail.com</li>
-            <li><strong style={{ color: "royalblue" }}>Phone:</strong>&nbsp;&nbsp;&nbsp;&nbsp; +92 3043330835</li>
-            <li><strong style={{ color: "royalblue" }}>Country:</strong>&nbsp;&nbsp;&nbsp;&nbsp; Pakistan</li>
-            <li><strong style={{ color: "royalblue" }}>City:</strong>&nbsp;&nbsp;&nbsp;&nbsp; Lahore</li>
+
+
+            <li><strong style={{ color: "var(--primary-light)" }}>Name:</strong>&nbsp;&nbsp;&nbsp;&nbsp; Muhammad Ahmad</li>
+            <li><strong style={{ color: "var(--primary-light)" }}>Role:</strong>&nbsp;&nbsp;&nbsp;&nbsp; Founder & Full-Stack AI Engineer, Godiddly</li>
+            <li><strong style={{ color: "var(--primary-light)" }}>Email:</strong>&nbsp;&nbsp;&nbsp;&nbsp; ahmadhoney7850@gmail.com</li>
+            <li><strong style={{ color: "var(--primary-light)" }}>Phone:</strong>&nbsp;&nbsp;&nbsp;&nbsp; +92 3043330835</li>
+            <li><strong style={{ color: "var(--primary-light)" }}>Country:</strong>&nbsp;&nbsp;&nbsp;&nbsp; Pakistan</li>
+            <li><strong style={{ color: "var(--primary-light)" }}>City:</strong>&nbsp;&nbsp;&nbsp;&nbsp; Lahore</li>
           </ul>
         
           <motion.button className="custom-btn" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={downloadPDF}>
@@ -82,6 +84,7 @@ export default function Portfolio() {
         <Education/>
         <Achievements/>
         <Experience/>
+        <Testimonial/>
         {/* Services Section */}
         <motion.div
           id="services"
@@ -159,16 +162,70 @@ export default function Portfolio() {
   <h2 className="section-title">Projects</h2>
   <div className="projects-grid">
     {[
-      { name: "User Authentication System", link: "https://user-authentication-system-lyart.vercel.app/", img: "./Images/User.png" },
-      { name: "University Map application", link: "https://hannanm10.github.io/UET-Navigation-System/", img: "./Images/Map.jpg" },
-      { name: "Data Visualization Dashboard", link: "https://stocks-and-crypto-visualization-dashboard-uo2t.vercel.app/", img: "./Images/stock.png" },
-      { name: "Sorting Visualizer", link: "https://data-sorting-visualizer.vercel.app/", img: "./Images/Sorting.png" },
-      { name: "Solitaire Game", link: "https://solitaire-game-phi.vercel.app/", img: "./Images/Soliatire.png" },
-      { name: "Student Management System", link: "https://student-managment-system-mauve.vercel.app/", img: "./Images/Student.png" },
-      { name: "Scrap Xpert", link: "https://scrap-xpert.vercel.app/", img: "./Images/Scrap.png" },
-      { name: "Foodpanda Desktop Application", link: "https://food-panda-clone-sage.vercel.app/", img: "./Images/foodpanda.png" },
-      { name: "TankWars Desktop Game", link: "https://tank-wars-blond.vercel.app/", img: "./Images/game.png" }
-    ].map(({ name, link, img }, index) => (
+      {
+        name: "Travel Business Application",
+        desc: "Enterprise-grade system for managing large-scale travel transactions, expense tracking, and bookings for a travel business.",
+        link: "https://www.fiverr.com/s/e65G7qg",
+        img: "./Images/TravelBusiness.png",
+        type: "case-study",
+      },
+      {
+        name: "Airport Ground Simulator for Runway Operations",
+        desc: "Web-based simulation system for modeling and analyzing airport ground operations, queue length, hold points, and runway throughput.",
+        link: "https://www.fiverr.com/s/e65G7qg",
+        img: "./Images/AirportSimulator.png",
+        type: "case-study",
+      },
+      {
+        name: "Smart Booking App for a Travel Agency",
+        desc: "Dynamic, script-driven web application that lets a travel agency generate transactions and bookings on demand.",
+        link: "https://www.fiverr.com/s/e65G7qg",
+        img: "./Images/GoogleScriptTravel.png",
+        type: "case-study",
+      },
+      {
+        name: "Hotel Management & Booking Platform (Azure)",
+        desc: "Full-stack hotel booking platform built on a modern cloud stack with Microsoft Azure, from search to reservation.",
+        link: "https://www.fiverr.com/s/e65G7qg",
+        img: "./Images/HotelAzure.png",
+        type: "case-study",
+      },
+      {
+        name: "Stock Market & Crypto Analytics Dashboard",
+        desc: "Real-time data visualization dashboard tracking TESLA stock alongside major cryptocurrencies like BTC and ETH.",
+        link: "https://stocks-and-crypto-visualization-dashboard-uo2t.vercel.app/",
+        img: "./Images/stock.png",
+        type: "demo",
+      },
+      {
+        name: "Sorting Algorithm Visualizer",
+        desc: "Interactive GUI for visualizing and executing a range of sorting algorithms step-by-step.",
+        link: "https://data-sorting-visualizer.vercel.app/",
+        img: "./Images/Sorting.png",
+        type: "demo",
+      },
+      {
+        name: "Scrap Xpert — Inventory & Sales System",
+        desc: "Full-featured desktop application for a scrap business, tracking sales, purchases, vouchers, and inventory in real time.",
+        link: "https://scrap-xpert.vercel.app/",
+        img: "./Images/Scrap.png",
+        type: "demo",
+      },
+      {
+        name: "Solitaire Desktop Game",
+        desc: "Classic Solitaire card game built with C# and the .NET WinForms framework.",
+        link: "https://solitaire-game-phi.vercel.app/",
+        img: "./Images/Soliatire.png",
+        type: "demo",
+      },
+      {
+        name: "University Campus Navigation System",
+        desc: "Desktop navigation application built with C#/.NET, mapping and routing across a full university campus.",
+        link: "https://hannanm10.github.io/UET-Navigation-System/",
+        img: "./Images/Map.jpg",
+        type: "demo",
+      },
+    ].map(({ name, desc, link, img, type }, index) => (
       <motion.div
         key={index}
         className="project-card"
@@ -180,13 +237,14 @@ export default function Portfolio() {
       >
         <img src={img} alt={name} className="project-img" />
         <h3 className="project-title">{name}</h3>
-        <a 
-          href={link} 
-          className="project-link" 
-          target="_blank" 
+        <p className="project-desc">{desc}</p>
+        <a
+          href={link}
+          className="project-link"
+          target="_blank"
           rel="noopener noreferrer"
         >
-          Click to View Project <FaExternalLinkAlt />
+          {type === "demo" ? "Live Demo" : "View Case Study"} <FaExternalLinkAlt />
         </a>
       </motion.div>
     ))}
@@ -214,7 +272,7 @@ export default function Portfolio() {
         </motion.div>
       </div>
       {/* Footer */}
-      <footer className="footer">© Portfolio of Software Developer Muhammad Ahmad </footer>
+      <footer className="footer">© Portfolio of Muhammad Ahmad — Founder, Godiddly</footer>
     </div>
   );
 }

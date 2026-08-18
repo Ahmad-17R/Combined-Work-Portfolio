@@ -1,6 +1,6 @@
 #experience {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: rgba(30, 41, 59, 0.4);
+  background: rgba(28, 37, 54, 0.4);
   backdrop-filter: blur(20px);
   color: var(--text-primary);
   padding: 4rem 8%;
@@ -54,14 +54,14 @@
 .experience-icon {
   font-size: 2.25rem;
   color: var(--primary-color);
-  filter: drop-shadow(0 4px 8px rgba(99, 102, 241, 0.3));
+  filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
 }
 
 .experience-card {
   display: flex;
   align-items: center;
   gap: 3rem;
-  background: rgba(30, 41, 59, 0.6);
+  background: rgba(28, 37, 54, 0.6);
   backdrop-filter: blur(20px);
   padding: 3rem;
   border-radius: 1rem;
@@ -70,6 +70,52 @@
   border: 1px solid var(--border-color);
   position: relative;
   overflow: hidden;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.experience-card:last-child {
+  margin-bottom: 0;
+}
+
+.exp-logo-placeholder {
+  width: 100%;
+  max-width: 400px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.05));
+  color: var(--primary-color);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.exp-logo-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
+}
+
+.exp-logo-img {
+  max-width: 65%;
+  max-height: 65%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.35));
+}
+
+.exp-logo-placeholder span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.experience-card:hover .exp-logo-placeholder {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
 }
 
 .experience-card::before {
@@ -79,7 +125,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
   transition: left 0.5s ease;
 }
 
@@ -88,7 +134,7 @@
 }
 
 .experience-card:hover {
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(59, 130, 246, 0.1);
   border-color: var(--primary-color);
   transform: translateY(-8px) scale(1.02);
   box-shadow: var(--shadow-xl), var(--shadow-glow);
