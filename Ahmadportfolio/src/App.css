@@ -776,3 +776,136 @@
     display: none;
   }
 }
+
+/* ===== Godiddly business-portfolio additions ===== */
+
+/* Hero: eyebrow label, logo emblem, CTA row */
+.hero-eyebrow {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-light);
+  margin-bottom: 1rem;
+}
+
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  background: rgba(59, 130, 246, 0.06);
+  border: 1px solid var(--border-color);
+  filter: drop-shadow(0 8px 24px rgba(59, 130, 246, 0.35));
+  animation: fadeIn 1.2s ease-out, float 6s ease-in-out infinite;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Secondary (ghost) button — reuses .custom-btn; transparent until hover */
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border-hover);
+  box-shadow: none;
+}
+
+/* Stats / impact band */
+.stats-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 5%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 2rem 1.5rem;
+  background: rgba(28, 37, 54, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+.stat-number {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+}
+
+/* Service description text */
+.service-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-top: 0.75rem;
+}
+
+/* Tech-stack list under each category */
+.skill-tech {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .stats-section {
+    margin: 2rem auto;
+  }
+}
+
+/* "Show more" projects toggle */
+.show-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.show-more-btn {
+  margin-top: 0;
+}
