@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { SiFiverr, SiUpwork } from "react-icons/si";
 import {
@@ -128,7 +129,7 @@ export default function Portfolio() {
               <h1 className="title">Godiddly</h1>
               <p className="subtitle">We design, build, and ship full-stack web, desktop, and automation software for businesses worldwide.</p>
               <div className="hero-cta">
-                <a href="#projects" className="custom-btn">View Our Work <FaArrowRight /></a>
+                <Link to="/work" className="custom-btn">View Our Work <FaArrowRight /></Link>
                 <a href="#contact" className="custom-btn btn-secondary">Get in Touch</a>
               </div>
             </div>
